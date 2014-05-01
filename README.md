@@ -1,3 +1,1 @@
-# chat
-
-a [Sails](http://sailsjs.org) application
+Install sails beta
