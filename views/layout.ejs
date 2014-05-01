@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	<!-- <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+	<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+	<!-- Viewport mobile tag for sensible mobile support -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	
+	
+</head>
+
+<body>
+	
+<header class="navbar navbar-default  bf-docs-nav" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bf-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="/" class="navbar-brand" style="font-family: 'Rock Salt', cursive;">ChatApp</a>
+			</div>
+			<nav class="collapse navbar-collapse bf-navbar-collapse" role="navigation">
+				<ul class="nav navbar-nav navbar-right primary-nav">
+					<li id="StudySmart"><a href="/">Home</a></li></li>
+					<% if (!session.authenticated) { %>
+					<li id="Register"><a href="/user/new"  >Register</a></li>
+					<li id="Login"><a href="/session/new">Login</a></li>
+					<% } else { %>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello, <%- session.User.email %> <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li id="Info"><a href="/user/info?id=<%- session.User.id %>">Info</a></li>
+							<li id="Logout"><a href="/session/destroy">Log-out</a></li>
+						</ul>
+					</li>
+
+					<% } %>
+					<li id="about"><a href="#about" data-toggle="modal" data-target="#about">About</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<%- body %>
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="/js/socket.io.js"></script>
+	<script src="/js/sails.io.js"></script>
+	<script src="/js/app.js"></script>
+	<script src="/js/example.js"></script>
+	<script src="/js/user.js"></script>
+</body>
+</html>
