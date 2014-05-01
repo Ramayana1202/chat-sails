@@ -3,9 +3,9 @@ Install sails beta<br/>
 Continue:<br>
 <code>git clone https://github.com/KnightVincv/chat-sails.git</code><br/>
 After:
-<code>cd chat-sails</code></br>
-And in this project you need install modules:</br>
-<code>npm install sails-mongo</br>
+<code>cd chat-sails</code><br/>
+And in this project you need install modules:<br/>
+<code>npm install sails-mongo<br/>
 npm install MD5</code><br/>
 ...
 <br/>
