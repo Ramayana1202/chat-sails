@@ -1,4 +1,4 @@
-Install sails beta
+Install sails beta<br/>
 npm -g install sails
 Continue:
 git clone https://github.com/KnightVincv/chat-sails.git
