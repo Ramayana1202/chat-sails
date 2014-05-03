@@ -1,3 +1,4 @@
+#Example chat private project by SailsJS
 Install sails beta<br/>
 <code>npm -g install sails</code><br/>
 Continue:<br>
